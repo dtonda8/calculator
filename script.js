@@ -4,21 +4,11 @@ const displayPreviousDiv = document.getElementById('prev')
 const NUMBERS ='1234567890.';
 const OPERATIONS = '+-*/';
 
-// key operations 
-function add(n1, n2) {
-    return Number(n1) + Number(n2)
-}
-
-function minus(n1, n2) {
-    return Number(n1) - Number(n2)
-}
-
-function times(n1, n2) {
-    return Number(n1) * Number(n2)
-}
-
-function divide(n1, n2) {
-    return Number(n1) / Number(n2)
+const operation = {
+    '+': (n1, n2) => Number(n1) + Number(n2),
+    '-': (n1, n2) => Number(n1) - Number(n2),
+    '*': (n1, n2) => Number(n1) * Number(n2),
+    '/': (n1, n2) => Number(n1) / Number(n2)
 }
 
 buttons.forEach(button => {
@@ -36,13 +26,6 @@ document.addEventListener('keydown', function(event) {
 let n1 = null;
 let currentOperation = null;
 let n2 = null;
-
-const operation = {
-    '+': add,
-    '-': minus,
-    '*': times,
-    '/': divide
-}
 
 function operate(key) {
     if (key === 'AC') {
@@ -94,8 +77,5 @@ function operate(key) {
     } else if ((key === 'C' && currentOperation && n2)) {
         n2 = n2.slice(0, -1);
         displayCurrentDiv.textContent = n2;
-
     }
-
 }
-
