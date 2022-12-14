@@ -1,6 +1,7 @@
 * {
     font-family: 'Roboto Mono', monospace;
-    color: #007acc;
+    color: #0098fd;
+    font-size: 28px;
 }
 body {
     background-color: #1e1e1e;
@@ -13,7 +14,9 @@ body {
 #calculator {
     width: 450px;
     padding: 16px;
-    background: #aaa;
+    background: rgb(107, 107, 107);
+    border: 10px solid #a3a3a3;
+    border-radius: 20px;
 }
 
 #inner-calculator {
@@ -26,10 +29,14 @@ div#display {
     min-height: 118px;
     display: flex;
     flex-direction: column;
+    border: 3px solid black;
+    border-radius: 8px;
 }
 
 div#curr,
 div#prev {
+    color: #1e1e1e;
+    font-size: 8px;
     padding: 8px;
     display: flex;
     align-items: center;
@@ -79,6 +86,18 @@ div#b {
     width: 50%;
 }
 
+button {
+    border: 2px solid black;
+    border-radius: 12px;
+    font-size: 23px;
+    margin: 4px;
+    background-color: #5a5a5a;
+}
+
+button:hover {
+    background-color: transparent;
+}
+
 
 #footer img {
     width: 20px;
@@ -99,4 +118,4 @@ div#b {
     gap: 10px;
 }
 
-
+/* #393939 */
